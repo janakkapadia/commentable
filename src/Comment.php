@@ -16,6 +16,15 @@ class Comment extends Model {
 
     protected $with = ['user'];
 
+    public function boot()
+    {
+        self::creating(function ($comment) {
+            if (auth()->check()) {
+                $comment->user_id = auth()->id();
+            }
+        });
+    }
+
     public function commentable()
     {
         return $this->morphTo();

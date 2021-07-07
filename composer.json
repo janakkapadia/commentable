@@ -1,14 +1,12 @@
 {
     "name": "janak/commentable",
     "description": "Commentable - Easy way to apply comment on any model.",
-    "type": "project",
+    "type": "package",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "janakkapadia",
-            "email": "kapadia.janak@gmail.com"
-        }
-    ],
+    "authors": [{
+        "name": "janakkapadia",
+        "email": "kapadia.janak@gmail.com"
+    }],
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {

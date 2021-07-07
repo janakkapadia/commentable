@@ -1,0 +1,29 @@
+{
+    "name": "janak/commentable",
+    "description": "Commentable - Easy way to apply comment on any model.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "janakkapadia",
+            "email": "kapadia.janak@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "JanakKapadia\\Commentable\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JanakKapdaia\\Commentable\\CommentableServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0"
+    }
+}

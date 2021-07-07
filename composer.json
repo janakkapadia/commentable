@@ -10,7 +10,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "JanakKapadia\\Commentable\\": "src"
+            "JanakKapadia\\Commentable\\": "src/"
         }
     },
     "extra": {

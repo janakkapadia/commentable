@@ -35,17 +35,8 @@ class Comment extends Model {
         return $this->belongsTo($this->getAuthModelName(), 'user_id');
     }
 
-    public function user($configKey = 'auth.providers.users.model')
+    public function user($configKey = 'auth.providers.users.model'): BelongsTo
     {
         return $this->belongsTo(config()->get($configKey));
-    }
-
-    protected function getAuthModelName()
-    {
-        if (!is_null(config('auth.providers.users.model'))) {
-            return config('auth.providers.users.model');
-        }
-
-        throw new Exception('Could not determine the commentator model name.');
     }
 }

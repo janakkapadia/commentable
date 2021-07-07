@@ -16,7 +16,7 @@ class Comment extends Model {
 
     protected $with = ['user'];
 
-    public function boot()
+    protected static function boot()
     {
         self::creating(function ($comment) {
             if (auth()->check()) {

@@ -1,14 +1,12 @@
 <?php
 namespace JanakKapadia\Commentable\Traits;
 
+use Illuminate\Database\Eloquent\Model;
 use JanakKapadia\Commentable\Comment;
 
 trait HasComments
 {
     public static function bootCommentable() {
-        self::creating(function ($model){
-            $model->user = config('auth.providers.users.model');
-        });
         self::deleting(function ($model){
             $model->comments->each->delete();
         });
@@ -17,5 +15,10 @@ trait HasComments
     public function comments()
     {
         return $this->morphMany(Comment::class, 'commentable');
+    }
+
+    public function user($configKey = 'auth.providers.users.model')
+    {
+        return $this->belongsTo(config()->get($configKey));
     }
 }

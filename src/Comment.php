@@ -24,6 +24,11 @@ class Comment extends Model {
         return $this->belongsTo($this->getAuthModelName(), 'user_id');
     }
 
+    public function user($configKey = 'auth.providers.users.model')
+    {
+        return $this->belongsTo(config()->get($configKey));
+    }
+
     protected function getAuthModelName()
     {
         if (!is_null(config('auth.providers.users.model'))) {

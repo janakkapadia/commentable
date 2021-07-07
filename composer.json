@@ -16,7 +16,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "JanakKapadia\\Commentable\\CommentableServiceProvider"
+                "JanakKapadia\\Commentable\\CommentableServiceProvider",
             ]
         }
     },

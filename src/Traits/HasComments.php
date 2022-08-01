@@ -8,7 +8,7 @@ trait HasComments
 {
     public static function bootCommentable() {
         self::deleting(function ($model){
-            $model->comments->delete();
+            $model->comments()->delete();
         });
     }
 
